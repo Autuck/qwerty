@@ -1,33 +1,44 @@
-<!DOCTYPE html>
+<!DOCTYPEhtml>
 <html>
-
-<head>
-<script src="http://code.jquery.com/jquery-latest.js">
-</script>
-<script>
-
-$(document).ready(function ()
- {
-   $("#but1").click(function () 
-     {
-       $(".MsoNormal:odd").hide();
-     });
-   $("#but2").click(function ()
-     {
-       $(".MsoNormal:odd").show();
-     });
- });
-</script>
+<head> 
+<title> лаб раб 1 </title>
 
 </head>
-<body>
+<body> 
+<form name="forma1">
+Введите натуральное число q >=0 <input type="text" name="q" 
+size="10" />
 
-<button id="but1">Click me</button>
-<button id="but2">Click me for show</button>
-<p class="MsoNormal">0</p>
-<p class="MsoNormal">1</p>
-<p class="MsoNormal">2</p>
+<br /><br />
+Введите натуральное число p > q <input type="text" name="p" 
+size="10" /> 
+<br /><br />
+<input type="button" value="вычислить" onclick="otvet();" />
+<br /><br /> 
+
+<br /><br /> 
+</form> 
 
 
+</script>
+<script> 
+function otvet() {var q = document.forma1.q.value; var p = 
+
+document.forma1.p.value; var z=0; 
+var arr = [];
+while(z<67){
+var elem = Math.floor((Math.random()*67)+0);
+arr[z] = elem;
+z++;}
+alert (arr);
+for (var z=0;z<=arr.length;z++){
+if (arr[z]%p==q)
+{ (arr[z]=0);
+} else {
+(arr[z]);}
+;
+}
+alert (arr); }
+</script>
 </body>
 </html>
